@@ -1,0 +1,20 @@
+<!--là một thành phần đặc biệt được sử dụng để định nghĩa các đoạn HTML có thể được hiển thị (render) một cách linh hoạt,
+ tùy theo điều kiện hoặc logic nào đó. Nó không được render trực tiếp vào DOM cho đến khi Angular quyết định làm điều đó
+  thông qua các cấu trúc như *ngIf, *ngFor, ngTemplateOutlet, v.v. -->
+<h2>Learn NG Template</h2>
+<ng-template #myTemplate >
+  <h3>This is a template</h3>
+  <p>This is an example paragraph to understand ng-template</p>
+</ng-template>
+
+<!--ngTemplateOutlet Directive : 
+- Dùng để chèn một ng-template vào vị trí cụ thể
+- Cho phép tái sử dụng nhiều lần
+-->
+<ng-container *ngTemplateOutlet="myTemplate" ></ng-container>
+
+
+<div *ngTemplateOutlet="myTemplate" ></div>
+
+
+
