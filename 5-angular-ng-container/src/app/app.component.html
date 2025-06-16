@@ -1,0 +1,12 @@
+<!-- 
+Dùng để nhóm các phần tử trong template 
+mà không tạo ra bất kỳ phần tử DOM nào khi render ra HTML. 
+-->
+<ng-container *ngIf="toggle; else toggleOff">
+  <p>The toggle is on.</p>
+</ng-container>
+
+<ng-template #toggleOff>
+  <p>The toggle is off.</p> 
+</ng-template>
+<button (click)="onToggle()">Toggle</button>
